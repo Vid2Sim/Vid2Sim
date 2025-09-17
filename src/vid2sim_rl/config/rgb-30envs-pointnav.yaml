@@ -8,40 +8,45 @@ load_path:
 # Environment Settings
 env:
   env_paths: [
-   "envs/city-env/0000/env.x86_64",
-   "envs/city-env/0001/env.x86_64",
-   "envs/city-env/0003/env.x86_64",
-   "envs/city-env/0004/env.x86_64",
-   "envs/city-env/0005/env.x86_64",
-   "envs/city-env/0006/env.x86_64",
-   "envs/city-env/0008/env.x86_64",
-   "envs/city-env/0009/env.x86_64",
-   "envs/city-env/0010/env.x86_64",
-   "envs/city-env/0014/env.x86_64",
-   "envs/city-env/0015/env.x86_64",
-   "envs/city-env/0017/env.x86_64",
-   "envs/city-env/0019/env.x86_64",
-   "envs/city-env/0020/env.x86_64",
-   "envs/city-env/0021/env.x86_64",
-   "envs/city-env/0022/env.x86_64",
-   "envs/city-env/0024/env.x86_64",
-   "envs/city-env/0025/env.x86_64",
-   "envs/city-env/0026/env.x86_64",
-   "envs/city-env/0027/env.x86_64",
-   "envs/city-env/0028/env.x86_64",
-   "envs/city-env/0030/env.x86_64",
-   "envs/city-env/0034/env.x86_64",
-   "envs/city-env/0035/env.x86_64",
-   "envs/city-env/0036/env.x86_64",
-   "envs/city-env/0038/env.x86_64",
-   "envs/city-env/0039/env.x86_64",
-   "envs/city-env/0042/env.x86_64",
-   "envs/city-env/0043/env.x86_64",
-   "envs/city-env/0044/env.x86_64",
+   "envs/static/00/env.x86_64",
+   "envs/static/01/env.x86_64",
+   "envs/static/02/env.x86_64",
+   "envs/static/03/env.x86_64",
+   "envs/static/04/env.x86_64",
+   "envs/static/05/env.x86_64",
+   "envs/static/06/env.x86_64",
+   "envs/static/07/env.x86_64",
+   "envs/static/08/env.x86_64",
+   "envs/static/09/env.x86_64",
+   "envs/static/10/env.x86_64",
+   "envs/static/11/env.x86_64",
+   "envs/static/12/env.x86_64",
+   "envs/static/13/env.x86_64",
+   "envs/static/14/env.x86_64",
+   "envs/static/15/env.x86_64",
+   "envs/static/16/env.x86_64",
+   "envs/static/17/env.x86_64",
+   "envs/static/18/env.x86_64",
+   "envs/static/19/env.x86_64",
+   "envs/static/20/env.x86_64",
+   "envs/static/21/env.x86_64",
+   "envs/static/22/env.x86_64",
+   "envs/static/23/env.x86_64",
+   "envs/static/24/env.x86_64",
+   "envs/static/25/env.x86_64",
+   "envs/static/26/env.x86_64",
+   "envs/static/27/env.x86_64",
+   "envs/static/28/env.x86_64",
+   "envs/static/29/env.x86_64",
   ]
   test_env_paths: [
-    "" # Test env path goes here
+    "envs/static/00/env.x86_64", # Test env goes here
   ]
+  unity_args:
+    - "-batchmode"
+    - "-force-vulkan"
+    - "-screen-width=1280"
+    - "-screen-height=720"
   env_class: 'subproc'
   seed: 0
   time_scale: 10.0
@@ -113,13 +118,4 @@ inference:
   video_path: "videos/"
   fps: 5
 
-inference:
-  num_episodes: 25
-  render: True
-  render_freq: 1
-  max_steps: 1000
-  decision_freq: 10
-  plot_path: "plots/"
-  video_path: "videos/"
-  fps: 30
 

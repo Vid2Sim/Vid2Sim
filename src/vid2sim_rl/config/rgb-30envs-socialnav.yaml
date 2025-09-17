@@ -8,40 +8,45 @@ load_path:
 # Environment Settings
 env:
   env_paths: [
-   "envs/city-env-dynamic/0000/env.x86_64",
-   "envs/city-env-dynamic/0001/env.x86_64",
-   "envs/city-env-dynamic/0003/env.x86_64",
-   "envs/city-env-dynamic/0004/env.x86_64",
-   "envs/city-env-dynamic/0005/env.x86_64",
-   "envs/city-env-dynamic/0006/env.x86_64",
-   "envs/city-env-dynamic/0008/env.x86_64",
-   "envs/city-env-dynamic/0009/env.x86_64",
-   "envs/city-env-dynamic/0010/env.x86_64",
-   "envs/city-env-dynamic/0014/env.x86_64",
-   "envs/city-env-dynamic/0015/env.x86_64",
-   "envs/city-env-dynamic/0017/env.x86_64",
-   "envs/city-env-dynamic/0019/env.x86_64",
-   "envs/city-env-dynamic/0020/env.x86_64",
-   "envs/city-env-dynamic/0021/env.x86_64",
-   "envs/city-env-dynamic/0022/env.x86_64",
-   "envs/city-env-dynamic/0024/env.x86_64",
-   "envs/city-env-dynamic/0025/env.x86_64",
-   "envs/city-env-dynamic/0026/env.x86_64",
-   "envs/city-env-dynamic/0027/env.x86_64",
-   "envs/city-env-dynamic/0028/env.x86_64",
-   "envs/city-env-dynamic/0030/env.x86_64",
-   "envs/city-env-dynamic/0034/env.x86_64",
-   "envs/city-env-dynamic/0035/env.x86_64",
-   "envs/city-env-dynamic/0036/env.x86_64",
-   "envs/city-env-dynamic/0038/env.x86_64",
-   "envs/city-env-dynamic/0039/env.x86_64",
-   "envs/city-env-dynamic/0042/env.x86_64",
-   "envs/city-env-dynamic/0043/env.x86_64",
-   "envs/city-env-dynamic/0044/env.x86_64",
+   "envs/dynamic/00/env.x86_64",
+   "envs/dynamic/01/env.x86_64",
+   "envs/dynamic/02/env.x86_64",
+   "envs/dynamic/03/env.x86_64",
+   "envs/dynamic/04/env.x86_64",
+   "envs/dynamic/05/env.x86_64",
+   "envs/dynamic/06/env.x86_64",
+   "envs/dynamic/07/env.x86_64",
+   "envs/dynamic/08/env.x86_64",
+   "envs/dynamic/09/env.x86_64",
+   "envs/dynamic/10/env.x86_64",
+   "envs/dynamic/11/env.x86_64",
+   "envs/dynamic/12/env.x86_64",
+   "envs/dynamic/13/env.x86_64",
+   "envs/dynamic/14/env.x86_64",
+   "envs/dynamic/15/env.x86_64",
+   "envs/dynamic/16/env.x86_64",
+   "envs/dynamic/17/env.x86_64",
+   "envs/dynamic/18/env.x86_64",
+   "envs/dynamic/19/env.x86_64",
+   "envs/dynamic/20/env.x86_64",
+   "envs/dynamic/21/env.x86_64",
+   "envs/dynamic/22/env.x86_64",
+   "envs/dynamic/23/env.x86_64",
+   "envs/dynamic/24/env.x86_64",
+   "envs/dynamic/25/env.x86_64",
+   "envs/dynamic/26/env.x86_64",
+   "envs/dynamic/27/env.x86_64",
+   "envs/dynamic/28/env.x86_64",
+   "envs/dynamic/29/env.x86_64",
   ]
   test_env_paths: [
-    "" # Test env path goes here
+    "envs/dynamic/00/env.x86_64", # Test env goes here
   ]
+  unity_args:
+    - "-batchmode"
+    - "-force-vulkan"
+    - "-screen-width=1280"
+    - "-screen-height=720"
   env_class: 'subproc'
   seed: 1
   time_scale: 10.0

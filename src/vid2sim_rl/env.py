@@ -13,6 +13,7 @@ from torchvision import transforms as T
 import time
 import torch
 import torch.nn.functional as F
+from hydra.utils import to_absolute_path
 
 
 class HERWrapper(gym.ObservationWrapper):
@@ -145,12 +146,15 @@ class UnityEnvWrapper(gym.Env):
 def build_env(env_path, cfg, worker_id=0, random_seed=0, inference_mode=False, no_graphics=False):
     conf_channel = EngineConfigurationChannel()
     param_channel = EnvironmentParametersChannel()
+    abs_env_path = to_absolute_path(env_path)
+    unity_additional_args = getattr(cfg.env, 'unity_args', [])
     unity_env = UnityEnvironment(
-        file_name=env_path,
+        file_name=abs_env_path,
         seed=cfg.env.seed,
         side_channels=[conf_channel, param_channel],
         no_graphics=no_graphics,
         worker_id=worker_id,
+        additional_args=unity_additional_args if len(unity_additional_args) > 0 else None,
     )
     conf_channel.set_configuration_parameters(
         time_scale=cfg.env.time_scale, #if not inference_mode else 1.0,

@@ -106,6 +106,12 @@ or on remote server:
 xvfb-run --auto-servernum --server-args='-screen 0 1280x720x24' python infer.py --config_name <CONFIG_NAME>
 ```
 
+[Recommend] Using the script to start GPU training
+```bash
+./train.sh
+```
+ensure the `env_class: 'subproc'` to start environments in subprocess concurrently.
+
 
 ## Citation 📝
 
